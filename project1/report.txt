@@ -1,0 +1,82 @@
+1. Enter the number of hours it took you to complete the project betwee
+   the <<< and >>> signs below (eg, <<<10>>>).
+
+   <<< 40 >>>
+   
+2. Enter the difficulty level (1: very easy; 5: very difficult) of the project
+   between <<< and >>> signs below (eg, <<<3>>>).
+
+   <<<4 >>>
+
+3. Provide a short description of how you approached each problem, issues you 
+   encountered, and how you resolved those issues.
+
+   Problem 1 (Array Percolation)
+       Approach: Well initially my approach to this was to make instance variables that represent the 2d boolean array list.
+       Then making an instance variable called N which is the size of the 2d array then another instance variable which will represent the number of open sites.
+       Then initializing all the sites to false was simply just to setting it to it self but using the 'new' method for the boolean which set everything to false. Then for
+       open class it was just returning open array[i][j] and setting it equal to true and then incremented openSites by 1 each time it was opened.
+       For the isOpen method, I returned the open[i][j] which sees if the site is open or not and if not returns false otherwise. Then for isFull i had to set full to a
+       2d array boolean then use a for loop to iterate through each site and setting each site to full using the floodFill function. thenn returning the value stored
+       in full array of i and j. Then for numberOfOpenSites I just returned openSites which is the number of sites that is open. For percolates it was the same concept as
+       isFull but here im just going to iterate through the bottom row but i had to use a for loop and inside that loop an conditional statement to check if that site is
+       Full and if it is then return true. Then after return that the system percolates. Then to come up with the recursion it was similiar to the corner case I solved so it
+       was straight forward. Then for the N W S E recursion I thought of how (i,j) moves in a graph then i had to come up with it javas syntax
+
+
+       Issues and resolution: One problem I had in the beginning was setting it all to 0 because I didn't know when you initialize it java sets it to 0 for ints and
+       for booleans its automatically set to false. Another problem I had was in isFull class because I didn't know how to loop through only the first row. But I later then
+       figured it out through the help of Kyle who taught me the concepts of the 2darray and then figured it out by going through the top row using the number 0. One issue I had
+       was in the for loops i used the variable i when it was already defined so it was just incrementing i. I had to use a different variable for the actual for loop to work.
+       A problem i ran into was for the NWSE recursion because I thought it was going to be like a graph but for java's syntax it is different and I had to accumulate to that with
+       Kyle's help. He helped me conceptualize on how it worked on Java.
+
+   Problem 2 (Union Find Percolation)
+       Approach:  My approach to this was to make the regular instance variables then make 3 extra instance variables
+       one for the back wash problem and the other two to virtualize what the sink and source. Then make the corner case
+       which was fairly simple. Then I had initialize the variables but I also needed to connect the
+       top row to the virtual source and the bottom row to the sink. Then for the back wash solver
+       I connected the second UF to the source to solve the back wash problem. Then for the open function I thought of it
+       like in array perc where I had to check if it was open or not and if it was then set it to true.
+       Then I had to connect the neighboring sites if it was open or not and also used the extra UF function
+       to connect it. Then for is Open I returned true if the site was open.  for is full I had to return if the site
+       is full and its corresponding uf site is connected to the source. Then for number of open sites I just returned
+       the # of opensites that has been incrementing as the sites were opening. Then for percolates I checked
+       if the system percolates when connected to the sink. Then for encode it was a formula where no matter what parameters
+       were given it will correspond to the systems site.
+        *to solve back wash i made sure that there wasnt a sink using another UF function.*
+
+       Issues and resolution: I had multiple problems which was the N E S W where i made sure to connect the neighboring
+       open sites because it was the same thing in array percolation I was having problem with that until
+       I had to think of Java syntax. Another Issue was thinking about the backwash problem and what I came up with
+       is that what if there was something else checking if it goes back into the grid and I though
+       of using another UF system.
+
+   Problem 3 (Estimation of Percolation Threshold)
+       Approach: my approach to this was making another instance variable n to represent the system.
+        Then I had to make sure it passed the corner case between n and m. then i initialized my instance variables
+        made a for loop that itereates m amount of times that creates a uf system then make a while loop so that until
+        ufPercolation does percolate we will keep getting random # from size of the grid which will be the row and column in this case
+        i and j. Then when it does get it will open the row and column. Then put in the formula that was given in the pdf and store it into x
+        which is going to be the fraction of the sites that were opened.
+
+       Issues and resolution: One problem I had was implementing the math functions and making sure it was in correct order for orders of operation.
+       Then for my instance variable I had to add n and my for loop started to work after I did because before that it wasnt working. (help)Another thing I had a problem
+       with was returning the number of open sites I had thought I was supposed to keep a count until I figured out you can call the number of open sites in UF percolation
+
+
+4. Did you receive help from anyone? List their names, status (classmate, 
+   CS210 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   Kyle Hackett      Discussion Leader       Help conceptualize isFull
+                           SI                 help conceptualize backwash
+    Micheal Atkins    Classmate               help conceptualize math syntax for excercises in java
+
+5. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   ...
