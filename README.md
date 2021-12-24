@@ -1,1 +1,2 @@
 # Percolation
+I was asked to write a program to estimate the percolation threshold of a system. I was asked to go through an given n*n grid of sites. I had to check whether or not each site was either open or blocked. A full site is an open site that can be connected to an open site in the top row via a chain of neighboring. (Checking Left,right,up,down). The system percolates if there is a a full site in the bottom row. In other words, a system percolates if we fill all open sites connected to the top row and that process fills some open site on the bottom row.
